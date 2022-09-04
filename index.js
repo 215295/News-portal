@@ -58,7 +58,7 @@ const displayNewsCards=newscards=>{
                   </div>
                   
                   <div class="mx-3 mt-5 "> <p >View:${newscard.total_view} </p></div>   
-                  <div class="mt-5 ms-5  " ><button  onclick="displayModa('${newscard.category_id}')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal">Details</button>  </div>                             
+                  <div class="mt-5 ms-5  " ><button  onclick="loadModal('${newscard.category_id}')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#detailsModal">Details</button>  </div>                             
                          
                 </div>
               
@@ -77,20 +77,29 @@ loadNewsCards ()
 
 
 const loadModal=()=>{
-  const url='https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a'
+  const url='https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a${modal}'
   fetch(url)
   .then(res=>res.json())
   .then(data=>displayModal(data.data))
 }
 const displayModal=modals=>{
-  const 
+  const modalContainer=document.getElementById('modal-container')
  modals.forEach(modal => {
+  const modalDiv=document.createElement('div')
+  modalDiv.innerHTML=`
+  <img src="${modal.author.img} " alt="">
+  <p>Name:${modal.author.name} </p>
+   <h5>ID:${modal.category_id} </h5>
+  
+  
+  `
+  modalContainer.appendChild()
   
   
  });
 
 }
-loadModal()
+
 
 
 
