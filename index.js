@@ -25,7 +25,7 @@ function showCategory(categories) {
     
     const CategoryDiv = document.createElement("div");
     CategoryDiv.innerHTML = `
-    <a style="cursor:pointer;" class="text-primary text-decoration-none py-5" onclick=showCategoryNews(${category.category_id})>${category.category_name}
+    <a style="cursor:pointer;" class="text-primary text-decoration-none py-5 " onclick=showCategoryNews(${category.category_id})><p class="col-sm-12"> ${category.category_name}</p>
       `;
     show_categories.appendChild(CategoryDiv);
   });
