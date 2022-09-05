@@ -25,7 +25,7 @@ function showCategory(categories) {
     
     const CategoryDiv = document.createElement("div");
     CategoryDiv.innerHTML = `
-    <a style="cursor:pointer;" class="text-primary text-decoration-none py-5" onclick=showCategoryNews(${category.category_id})>${category.category_name}</a>
+    <a style="cursor:pointer;" class="text-primary text-decoration-none py-5" onclick=showCategoryNews(${category.category_id})>${category.category_name}
       `;
     show_categories.appendChild(CategoryDiv);
   });
@@ -45,7 +45,7 @@ function showCategoryNews(id) {
 const displayNews = alldata => {
   const datalist = alldata.data;
   countCategories.innerHTML = "";
-  const p = document.createElement("p");
+  const p = document.createElement("p");    
   const dataLength = alldata.data.length;
   if (dataLength) {
     p.innerHTML = dataLength + ` News Found This Category `;
@@ -54,6 +54,7 @@ const displayNews = alldata => {
     p.innerHTML = `No Data Found This Category `;
     countCategories.appendChild(p);
   }
+ 
   showCards.innerHTML = "";
   datalist.forEach(data => {
     const div = document.createElement("div");
@@ -203,3 +204,9 @@ const toggleSpiner=isLoading=>{
   }
 
 }
+// const loadSort=()=>{
+//   url=`https://openapi.programming-hero.com/api/news/category/0${id}`
+//   fetch(url)
+//   .then(res=>res.json())
+//   .then( )
+// }
