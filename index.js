@@ -62,10 +62,10 @@ const displayNews = alldata => {
             
         </div>
         <div  class="row g-0">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-12">
             <img src=${data.thumbnail_url} class="img-fluid rounded-start" alt="..." />
         </div>
-        <div class="col-md-8">
+        <div class="col-md-8 col-sm-12">
             <div class="card-body">
             <h5 class="card-title">${data.title}</h5>
             <p class="card-text text-truncate">
@@ -83,7 +83,7 @@ const displayNews = alldata => {
             </div>
             
             <div class="mx-3 mt-5 "> <p >View:${data.total_view ? data.total_view :'Not Found data' } </p></div>   
-            <div class="mt-5 ms-5  " ><button "userInfo('${data.category_id}', '${data._id}')"  class="btn btn-primary type="button"
+            <div class="mt-5 ms-5 col-sm-12 " ><button "userInfo('${data.category_id}', '${data._id}')"  class="btn btn-primary type="button"
             class="btn btn-primary"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal""> details</button>  </div>                             
@@ -172,7 +172,7 @@ const showAllNews = async () => {
                 
                 <div class="mx-3 mt-5 "> <p >View:${data.total_view ? data.total_view :'Not Found data'} </p></div> 
             </div>
-            <a onclick= "userInfo('${data.category_id}', '${data._id}')"  class="btn btn-primary type="button"
+            <a onclick= "userInfo('${data.category_id}', '${data._id}')" 
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal""> details</a>
