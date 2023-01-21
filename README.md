@@ -1,4 +1,8 @@
 # news-portal-assignemnt
+
+Code link : https://github.com/Programming-Hero-Web-Course4/b6-news-portal-assignment-215295
+Netlify link : https://celadon-biscuit-3a9d72.netlify.app/
+
 Please create yoru private repo 
 ## [https://classroom.github.com/a/PZ8KfL5q](https://classroom.github.com/a/PZ8KfL5q)
 
